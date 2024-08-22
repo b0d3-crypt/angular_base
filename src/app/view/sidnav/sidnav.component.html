@@ -1,0 +1,36 @@
+<div class="flex h-screen bg-gray-100">
+    <div [class.w-64]="isMenuExpanded" [class.w-16]="!isMenuExpanded"
+        class="group flex flex-col bg-gray-800 text-white transition-all duration-4000">
+        <div class="p-4 flex items-center justify-between">
+            <span [class.hidden]="!isMenuExpanded" class="text-xl font-bold whitespace-nowrap">Minha App</span>
+            <button (click)="toggleMenu()" class="material-icons text-white cursor-pointer">
+                {{ isMenuExpanded ? 'chevron_left' : 'menu' }}
+            </button>
+        </div>
+        <ul class="flex-grow">
+
+            <li class="p-4 hover:bg-gray-700 cursor-pointer rounded-md" *ngFor="let module of modules; let i = index"
+                (mouseenter)="isMenuExpanded ? setActiveModule(i) : null" (mouseleave)="clearActiveModule()">
+                <span class="flex items-center">
+                    <i class="w-6 h-6 mr-4 material-icons">{{ module.icon }}</i>
+                    <span [class.hidden]="!isMenuExpanded">{{ module.name }}</span>
+                </span>
+
+
+                <ul *ngIf="isMenuExpanded && activeModuleIndex === i" class="pl-6 mt-2">
+                    <li class="p-2 hover:bg-gray-600 cursor-pointer rounded-md" *ngFor="let feature of module.features">
+                        <span class="flex items-center">
+                            <i class="w-6 h-6 mr-4 material-icons">{{ feature.icon }}</i>
+                            <span>{{ feature.label }}</span>
+                        </span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="flex-1 p-10">
+        <h1 class="text-3xl font-bold">Conteúdo Principal</h1>
+        <p>Esta é a área principal da aplicação.</p>
+    </div>
+</div>

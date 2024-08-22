@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Principal",
+        "icon": "search",
+        "show": true,
+        "features": [
+            {
+                "label": "Teste",
+                "icon": "assignment_outline",
+                "routerLink": "/principal/"
+            }
+        ]
+    },
+    {
+        "name": "Teste",
+        "icon": "block",
+        "show": true
+    }
+]
