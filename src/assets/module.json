@@ -1,5 +1,6 @@
 [
     {
+        "section": "Principal",
         "name": "Principal",
         "icon": "search",
         "show": true,
@@ -8,12 +9,30 @@
                 "label": "Teste",
                 "icon": "assignment_outline",
                 "routerLink": "/principal/"
+            },
+            {
+                "label": "Tes3333te",
+                "icon": "assignment_outline",
+                "routerLink": "/principal/"
             }
         ]
     },
     {
+        "section": "Principal",
         "name": "Teste",
         "icon": "block",
+        "show": true
+    },
+    {
+        "section": "Configurações",
+        "name": "Usuários",
+        "icon": "person",
+        "show": true
+    },
+    {
+        "section": "Configurações",
+        "name": "Permissões",
+        "icon": "security",
         "show": true
     }
 ]
