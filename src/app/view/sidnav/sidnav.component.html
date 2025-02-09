@@ -9,7 +9,7 @@
         </div>
         <ul class="flex-grow">
 
-            <li *ngFor="let module of modules; let i = index" (click)="setActiveModule(i)">
+            <li *ngFor="let module of modules; let i = index" (click)="setActiveModule(i, $event)">
                 <div class="p-4 hover:bg-gray-700 cursor-pointer rounded-md flex items-center justify-between">
                     <span class="flex items-center">
                         <i class="w-6 h-6 mr-4 material-icons">{{ module.icon }}</i>
@@ -21,7 +21,8 @@
                 </div>
 
                 <ul *ngIf="activeModuleIndex === i" class="pl-6 mt-2">
-                    <li class="p-2 hover:bg-gray-600 cursor-pointer rounded-md" *ngFor="let feature of module.features">
+                    <li class="p-2 hover:bg-gray-600 cursor-pointer rounded-md" *ngFor="let feature of module.features"
+                        (click)="$event.stopPropagation()">
                         <span class="flex items-center">
                             <i class="w-6 h-6 mr-4 material-icons">{{ feature.icon }}</i>
                             <span>{{ feature.label }}</span>

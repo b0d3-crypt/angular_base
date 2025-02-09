@@ -6,7 +6,7 @@
         "show": true,
         "features": [
             {
-                "label": "Teste",
+                "label": "Pessoa",
                 "icon": "assignment_outline",
                 "routerLink": "/principal/"
             },
