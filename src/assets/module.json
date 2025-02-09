@@ -7,7 +7,7 @@
         "features": [
             {
                 "label": "Pessoa",
-                "icon": "assignment_outline",
+                "icon": "person_add",
                 "routerLink": "/principal/"
             },
             {

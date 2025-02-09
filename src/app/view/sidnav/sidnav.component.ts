@@ -33,9 +33,11 @@ export class SidnavComponent implements OnInit {
 
   setActiveModule(index: number, event?: MouseEvent): void {
     if (event) {
-      event.stopPropagation(); // Evita que o clique em um subitem afete o menu principal
+      event.stopPropagation(); 
     }
-  
+    if (!this.isMenuExpanded) {
+      this.toggleMenu();
+    }
     this.activeModuleIndex = this.activeModuleIndex === index ? null : index;
   }
 }
