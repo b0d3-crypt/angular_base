@@ -19,10 +19,6 @@ export class SidnavComponent implements OnInit {
     this.modules = moduleData;
   }
 
-  setActiveModule(index: number): void {
-    this.activeModuleIndex = index;
-  }
-
   clearActiveModule(): void {
     this.activeModuleIndex = null;
   }
@@ -30,5 +26,9 @@ export class SidnavComponent implements OnInit {
   toggleMenu(): void {
     this.isMenuExpanded = !this.isMenuExpanded;
     this.clearActiveModule(); 
+  }
+
+  setActiveModule(index: number): void {
+    this.activeModuleIndex = this.activeModuleIndex === index ? null : index;
   }
 }

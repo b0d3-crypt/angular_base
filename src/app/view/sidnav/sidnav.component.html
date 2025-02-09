@@ -9,17 +9,18 @@
         </div>
         <ul class="flex-grow">
 
-            <li *ngFor="let module of modules; let i = index" (mouseenter)="isMenuExpanded ? setActiveModule(i) : null"
-                (mouseleave)="clearActiveModule()">
-                <div class="p-4 hover:bg-gray-700 cursor-pointer rounded-md">
+            <li *ngFor="let module of modules; let i = index" (click)="setActiveModule(i)">
+                <div class="p-4 hover:bg-gray-700 cursor-pointer rounded-md flex items-center justify-between">
                     <span class="flex items-center">
                         <i class="w-6 h-6 mr-4 material-icons">{{ module.icon }}</i>
                         <span [class.hidden]="!isMenuExpanded">{{ module.name }}</span>
                     </span>
+                    <i *ngIf="module.features?.length" class="material-icons">
+                        {{ activeModuleIndex === i ? 'expand_less' : 'expand_more' }}
+                    </i>
                 </div>
-
-
-                <ul *ngIf="isMenuExpanded && activeModuleIndex === i" class="pl-6 mt-2">
+            
+                <ul *ngIf="activeModuleIndex === i" class="pl-6 mt-2">
                     <li class="p-2 hover:bg-gray-600 cursor-pointer rounded-md" *ngFor="let feature of module.features">
                         <span class="flex items-center">
                             <i class="w-6 h-6 mr-4 material-icons">{{ feature.icon }}</i>
