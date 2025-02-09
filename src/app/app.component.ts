@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Feature } from './models/interfaces/feature.interface';
 import { NavbarComponent } from './view/navbar/navbar.component';
 import { SidnavComponent } from "./view/sidnav/sidnav.component";
 
@@ -12,5 +13,15 @@ import { SidnavComponent } from "./view/sidnav/sidnav.component";
 })
 export class AppComponent {
   isMenuExpanded = false;
+
+  features: Feature[] = []; 
+
+  ngOnInit() {
+    this.features = [];
+  }
+
+  onFeaturesReceived(features: Feature[]) {
+    this.features = features; 
+  }
 
 }

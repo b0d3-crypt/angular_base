@@ -1,7 +1,7 @@
-<app-navbar [isMenuExpanded]="isMenuExpanded"></app-navbar>
+<app-navbar [isMenuExpanded]="isMenuExpanded" (moduleSelected)="onFeaturesReceived($event)"></app-navbar>
 
 <div class="flex h-screen">
-    <app-sidnav (menuToggled)="isMenuExpanded = $event"></app-sidnav>
+    <app-sidnav (menuToggled)="isMenuExpanded = $event" [featureSelected]="features"></app-sidnav>
     <div class="flex-1 p-10 mt-16 transition-all duration-300" [class.ml-64]="isMenuExpanded"
         [class.ml-16]="!isMenuExpanded">
         <router-outlet></router-outlet>

@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import moduleData from '../../../assets/module.json';
-import { Module } from '../../models/interfaces/module.interface';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Feature } from '../../models/interfaces/feature.interface';
 
 @Component({
   selector: 'app-sidnav',
@@ -12,13 +11,13 @@ import { Module } from '../../models/interfaces/module.interface';
 })
 export class SidnavComponent implements OnInit {
   @Output() menuToggled = new EventEmitter<boolean>(); 
-
+  @Input() featureSelected: Feature[] = [];
   activeModuleIndex: number | null = null;
-  modules: Module[] = [];
+  feature: Feature[] = [];
   isMenuExpanded = false;
 
   ngOnInit() {
-    this.modules = moduleData;
+    this.feature = this.featureSelected;
   }
 
   clearActiveModule(): void {

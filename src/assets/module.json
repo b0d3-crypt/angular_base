@@ -1,38 +1,56 @@
 [
     {
-        "section": "Principal",
+        "module": "Cadastro",
         "name": "Principal",
         "icon": "search",
         "show": true,
         "features": [
             {
-                "label": "Pessoa",
-                "icon": "person_add",
-                "routerLink": "/principal/"
+                "name": "Principal",
+                "icon": "search",
+                "show": true,
+                "features": [
+                    {
+                        "label": "Pessoas",
+                        "icon": "person_add",
+                        "routerLink": "/principal/"
+                    },
+                    {
+                        "label": "Empresas",
+                        "icon": "assignment_outline",
+                        "routerLink": "/principal/"
+                    }
+                ]
             },
             {
-                "label": "Tes3333te",
-                "icon": "assignment_outline",
+                "name": "Não Principal",
+                "icon": "search",
+                "show": true,
                 "routerLink": "/principal/"
             }
         ]
     },
     {
-        "section": "Principal",
-        "name": "Teste",
-        "icon": "block",
-        "show": true
-    },
-    {
-        "section": "Configurações",
-        "name": "Usuários",
-        "icon": "person",
-        "show": true
-    },
-    {
-        "section": "Configurações",
-        "name": "Permissões",
-        "icon": "security",
-        "show": true
+        "module": "Busca",
+        "show": true,
+        "features": [
+            {
+                "name": "Principal",
+                "icon": "search",
+                "show": true,
+                "features": [
+                    {
+                        "label": "Casas",
+                        "icon": "person_add",
+                        "routerLink": "/principal/"
+                    },
+                    {
+                        "label": "Endereços",
+                        "icon": "assignment_outline",
+                        "routerLink": "/principal/"
+                    }
+                ]
+            }
+        ]
     }
 ]

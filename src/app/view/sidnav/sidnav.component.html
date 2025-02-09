@@ -9,7 +9,7 @@
         </div>
         <ul class="flex-grow">
 
-            <li *ngFor="let module of modules; let i = index" (click)="setActiveModule(i, $event)">
+            <li *ngFor="let module of feature; let i = index" (click)="setActiveModule(i, $event)">
                 <div class="p-4 hover:bg-gray-700 cursor-pointer rounded-md flex items-center justify-between">
                     <span class="flex items-center">
                         <i class="w-6 h-6 mr-4 material-icons">{{ module.icon }}</i>
