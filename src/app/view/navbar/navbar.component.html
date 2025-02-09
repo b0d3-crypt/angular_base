@@ -1,10 +1,9 @@
-<nav class="bg-blue-600 text-white p-4 flex justify-between">
-    <span class="text-lg font-bold">Minha Aplicação</span>
-    <div class="flex space-x-4">
-        <button *ngFor="let section of sections" 
-                (click)="selectSection(section)"
-                class="bg-blue-800 px-4 py-2 rounded hover:bg-blue-700">
-            {{ section }}
-        </button>
-    </div>
-</nav>
+<!-- <div class="fixed top-0 left-0 h-16 bg-gray-800 text-white flex items-center px-4 shadow-md transition-all duration-300"
+    [class.ml-64]="isMenuExpanded" [class.ml-16]="!isMenuExpanded">
+    <h1 class="text-xl font-bold">Minha Aplicação</h1>
+</div> -->
+
+<div class="fixed top-0 left-0 w-full h-16 bg-gray-800 text-white flex items-center px-4 shadow-md transition-all duration-300"
+    [class.ml-64]="isMenuExpanded" [class.ml-16]="!isMenuExpanded">
+    <h1 class="text-xl font-bold">Minha Aplicação</h1>
+</div>

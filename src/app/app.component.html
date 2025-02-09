@@ -1,2 +1,9 @@
-<app-sidnav></app-sidnav>
-<router-outlet></router-outlet>
+<app-navbar [isMenuExpanded]="isMenuExpanded"></app-navbar>
+
+<div class="flex h-screen">
+    <app-sidnav (menuToggled)="isMenuExpanded = $event"></app-sidnav>
+    <div class="flex-1 p-10 mt-16 transition-all duration-300" [class.ml-64]="isMenuExpanded"
+        [class.ml-16]="!isMenuExpanded">
+        <router-outlet></router-outlet>
+    </div>
+</div>

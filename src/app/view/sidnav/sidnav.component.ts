@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import moduleData from '../../../assets/module.json';
 import { Module } from '../../models/interfaces/module.interface';
 
@@ -11,6 +11,8 @@ import { Module } from '../../models/interfaces/module.interface';
   styleUrl: './sidnav.component.scss'
 })
 export class SidnavComponent implements OnInit {
+  @Output() menuToggled = new EventEmitter<boolean>(); 
+
   activeModuleIndex: number | null = null;
   modules: Module[] = [];
   isMenuExpanded = false;
@@ -25,6 +27,7 @@ export class SidnavComponent implements OnInit {
 
   toggleMenu(): void {
     this.isMenuExpanded = !this.isMenuExpanded;
+    this.menuToggled.emit(this.isMenuExpanded)
     this.clearActiveModule(); 
   }
 

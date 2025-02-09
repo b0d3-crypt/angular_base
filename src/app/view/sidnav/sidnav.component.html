@@ -19,7 +19,7 @@
                         {{ activeModuleIndex === i ? 'expand_less' : 'expand_more' }}
                     </i>
                 </div>
-            
+
                 <ul *ngIf="activeModuleIndex === i" class="pl-6 mt-2">
                     <li class="p-2 hover:bg-gray-600 cursor-pointer rounded-md" *ngFor="let feature of module.features">
                         <span class="flex items-center">
@@ -31,9 +31,3 @@
             </li>
         </ul>
     </div>
-
-    <div class="flex-1 p-10">
-        <h1 class="text-3xl font-bold">Conteúdo Principal</h1>
-        <p>Esta é a área principal da aplicação.</p>
-    </div>
-</div>

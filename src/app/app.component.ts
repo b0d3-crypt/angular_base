@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './view/navbar/navbar.component';
 import { SidnavComponent } from "./view/sidnav/sidnav.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SidnavComponent],
+  imports: [RouterOutlet, SidnavComponent, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  isMenuExpanded = false;
+
 }

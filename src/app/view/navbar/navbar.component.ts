@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -8,11 +8,5 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  sections = ['Principal', 'Configurações', 'Relatórios'];
-
-  @Output() sectionSelected = new EventEmitter<string>();
-
-  selectSection(section: string): void {
-    this.sectionSelected.emit(section);
-  }
+  @Input() isMenuExpanded = false;
 }
