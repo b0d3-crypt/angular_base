@@ -11,12 +11,12 @@
                     {
                         "label": "Pessoas",
                         "icon": "person_add",
-                        "routerLink": "/principal/"
+                        "routerLink": "principal/pessoas"
                     },
                     {
                         "label": "Empresas",
                         "icon": "assignment_outline",
-                        "routerLink": "/principal/"
+                        "routerLink": "principal/empresas"
                     }
                 ]
             },

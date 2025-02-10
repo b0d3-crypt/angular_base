@@ -10,7 +10,7 @@
         <ul class="flex-grow">
 
             <li *ngFor="let module of feature; let i = index" (click)="setActiveModule(i, $event)">
-                <div class="p-4 hover:bg-gray-700 cursor-pointer rounded-md flex items-center justify-between">
+                <div class="p-4 hover:bg-gray-700  cursor-pointer rounded-md flex items-center justify-between">
                     <span class="flex items-center">
                         <i class="w-6 h-6 mr-4 material-icons">{{ module.icon }}</i>
                         <span [class.hidden]="!isMenuExpanded">{{ module.name }}</span>
@@ -22,7 +22,7 @@
 
                 <ul *ngIf="activeModuleIndex === i" class="pl-6 mt-2">
                     <li class="p-2 hover:bg-gray-600 cursor-pointer rounded-md" *ngFor="let feature of module.children"
-                        (click)="$event.stopPropagation()">
+                        (click)="$event.stopPropagation()" [routerLink]="feature.routerLink">
                         <span class="flex items-center">
                             <i class="w-6 h-6 mr-4 material-icons">{{ feature.icon }}</i>
                             <span>{{ feature.label }}</span>

@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { Feature } from '../../models/interfaces/feature.interface';
 
 @Component({
   selector: 'app-sidnav',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './sidnav.component.html',
   styleUrl: './sidnav.component.scss'
 })
