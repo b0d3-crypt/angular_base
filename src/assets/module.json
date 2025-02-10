@@ -22,7 +22,7 @@
             },
             {
                 "name": "Não Principal",
-                "icon": "search",
+                "icon": "check_box",
                 "show": true,
                 "routerLink": "/principal/"
             }

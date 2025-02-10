@@ -20,22 +20,26 @@ export class NavbarComponent implements OnInit {
   module: Module[] = [];
   selectedModule: string = '';
   selectedFeatures: Feature[] = [];
+  mod: Module | undefined 
 
   ngOnInit(): void {
     console.log(moduleData)
     this.module = moduleData;
     if (moduleData.length > 0) {
-      this.feature = moduleData[0].features || []; 
+      this.mod = moduleData[0]; 
       this.featureSelecionada(); 
     }
   }
 
   featureSelecionada() {
-    this.moduleSelected.emit(this.feature);
+    this.moduleSelected.emit(this.mod?.features);
+    this.selectedModule = this.mod?.module ?? ''; 
+
   }
 
   onModuleClick(mod: Module): void { 
-    this.feature = mod.features || [];
+    this.selectedModule = mod.module ?? '';
+    this.mod = mod || undefined;
     this.featureSelecionada();
   }
 

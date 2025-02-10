@@ -1,7 +1,10 @@
-<div class="fixed top-0 left-0 w-full h-16 bg-gray-800 text-white flex items-center px-4 shadow-md transition-all duration-300"
+<div class="fixed top-0 left-0 w-full h-16 bg-gray-700 text-white flex items-center px-4 shadow-md transition-all duration-300"
     [class.ml-64]="isMenuExpanded" [class.ml-16]="!isMenuExpanded">
 
-    <h1 class="text-xl font-bold mr-4 cursor-pointer" *ngFor="let mod of module" (click)="onModuleClick(mod)">>
+    <h1 class="text-xl font-bold mr-4 px-4 py-2 rounded-lg transition duration-200 ease-in-out 
+               bg-gray-700 hover:bg-gray-600 text-gray-300 hover:text-gray-100 hover:shadow-lg cursor-pointer"
+        *ngFor="let mod of module" (click)="onModuleClick(mod)"
+        [ngClass]="{'bg-gray-600 text-white': selectedModule === mod.module}">
         {{ mod.module }}
     </h1>
 </div>
