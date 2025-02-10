@@ -23,7 +23,6 @@ export class NavbarComponent implements OnInit {
   mod: Module | undefined 
 
   ngOnInit(): void {
-    console.log(moduleData)
     this.module = moduleData;
     if (moduleData.length > 0) {
       this.mod = moduleData[0]; 
