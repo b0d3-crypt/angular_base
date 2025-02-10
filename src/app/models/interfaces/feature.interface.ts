@@ -4,5 +4,5 @@ export interface Feature {
     name: string;
     icon: string;
     show: boolean;
-    features?: Children[];
+    children?: Children[];
 }

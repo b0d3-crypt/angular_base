@@ -15,13 +15,13 @@
                         <i class="w-6 h-6 mr-4 material-icons">{{ module.icon }}</i>
                         <span [class.hidden]="!isMenuExpanded">{{ module.name }}</span>
                     </span>
-                    <i *ngIf="module.features?.length" class="material-icons">
+                    <i *ngIf="module.children?.length" class="material-icons">
                         {{ activeModuleIndex === i ? 'expand_less' : 'expand_more' }}
                     </i>
                 </div>
 
                 <ul *ngIf="activeModuleIndex === i" class="pl-6 mt-2">
-                    <li class="p-2 hover:bg-gray-600 cursor-pointer rounded-md" *ngFor="let feature of module.features"
+                    <li class="p-2 hover:bg-gray-600 cursor-pointer rounded-md" *ngFor="let feature of module.children"
                         (click)="$event.stopPropagation()">
                         <span class="flex items-center">
                             <i class="w-6 h-6 mr-4 material-icons">{{ feature.icon }}</i>

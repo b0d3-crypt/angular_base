@@ -1,10 +1,10 @@
-import { Children } from "./children.interface";
+import { Feature } from "./feature.interface";
 
 export interface Module {
-    //module: string;
-    name: string;
+    module?: string;
+    name?: string;
     routerLink?: string;
     icon?: string;
     show: boolean;
-    features?: Children[];
+    features?: Feature[];
 };

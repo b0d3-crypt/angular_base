@@ -1,15 +1,13 @@
 [
     {
         "module": "Cadastro",
-        "name": "Principal",
-        "icon": "search",
         "show": true,
         "features": [
             {
                 "name": "Principal",
                 "icon": "search",
                 "show": true,
-                "features": [
+                "children": [
                     {
                         "label": "Pessoas",
                         "icon": "person_add",
@@ -35,10 +33,10 @@
         "show": true,
         "features": [
             {
-                "name": "Principal",
-                "icon": "search",
+                "name": "Não Principal",
+                "icon": "check_box",
                 "show": true,
-                "features": [
+                "children": [
                     {
                         "label": "Casas",
                         "icon": "person_add",

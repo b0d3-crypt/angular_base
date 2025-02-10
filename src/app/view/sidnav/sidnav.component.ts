@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Feature } from '../../models/interfaces/feature.interface';
 
 @Component({
@@ -9,7 +9,7 @@ import { Feature } from '../../models/interfaces/feature.interface';
   templateUrl: './sidnav.component.html',
   styleUrl: './sidnav.component.scss'
 })
-export class SidnavComponent implements OnInit {
+export class SidnavComponent implements OnInit, OnChanges {
   @Output() menuToggled = new EventEmitter<boolean>(); 
   @Input() featureSelected: Feature[] = [];
   activeModuleIndex: number | null = null;
@@ -18,6 +18,12 @@ export class SidnavComponent implements OnInit {
 
   ngOnInit() {
     this.feature = this.featureSelected;
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['featureSelected'] && changes['featureSelected'].currentValue) {
+      this.feature = changes['featureSelected'].currentValue; 
+    }
   }
 
   clearActiveModule(): void {

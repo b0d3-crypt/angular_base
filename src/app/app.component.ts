@@ -23,5 +23,4 @@ export class AppComponent {
   onFeaturesReceived(features: Feature[]) {
     this.features = features; 
   }
-
 }
