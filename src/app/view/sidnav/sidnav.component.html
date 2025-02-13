@@ -1,8 +1,8 @@
-<div class="flex h-screen bg-gray-100">
+<div class="flex h-screen bg-gray-100" rounded-lg>
     <div [class.w-64]="isMenuExpanded" [class.w-16]="!isMenuExpanded"
         class="group flex flex-col bg-gray-800 text-white transition-all duration-4000">
         <div class="p-4 flex items-center justify-between">
-            <span [class.hidden]="!isMenuExpanded" class="text-xl font-bold whitespace-nowrap">Minha App</span>
+            <span [class.hidden]="!isMenuExpanded" class="text-xl font-bold whitespace-nowrap ">Minha App</span>
             <button (click)="toggleMenu()" class="material-icons text-white cursor-pointer">
                 {{ isMenuExpanded ? 'chevron_left' : 'menu' }}
             </button>
