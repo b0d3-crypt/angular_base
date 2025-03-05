@@ -2,7 +2,7 @@
 
 <div class="flex">
     <app-sidnav (menuToggled)="isMenuExpanded = $event" [featureSelected]="features"></app-sidnav>
-    <div class="flex-1 mt-8  duration-300 overflow-y-auto" [class.ml-128]="isMenuExpanded"
+    <div class="flex-1 mt-16 duration-300 overflow-y-auto" [class.ml-128]="isMenuExpanded"
         [class.ml-1]="!isMenuExpanded">
         <router-outlet></router-outlet>
     </div>
