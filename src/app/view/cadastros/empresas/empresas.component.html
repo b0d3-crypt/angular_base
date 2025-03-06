@@ -1,21 +1,21 @@
-<div class="bg-gray-200 p-12 pt-16 flex flex-col gap-4 min-h-screen">
-    <div class="flex justify-between items-center pb-4 border-gray-300">
-        <h1 class="text-3xl font-bold">Gestão de Empresas</h1>
+<div class="view-container">
+    <div class="tittle-container">
+        <h1 class="tittle-style">Gestão de Empresas</h1>
         <app-button-options></app-button-options>
-
     </div>
-    <div class="flex flex-wrap gap-4 items-end">
-        <app-text-empresa></app-text-empresa>
-        <app-text-empresa></app-text-empresa>
-        <app-text-empresa></app-text-empresa>
+    <div class="view">
+        <div class="input-container">
+            <app-text-empresa></app-text-empresa>
+            <app-text-empresa></app-text-empresa>
+            <app-text-empresa></app-text-empresa>
 
-        <div class="flex justify-end gap-4 ml-auto">
-            <app-button-pesquisar></app-button-pesquisar>
-            <app-button-limpar></app-button-limpar>
+            <div class="button-container">
+                <app-button-pesquisar></app-button-pesquisar>
+                <app-button-limpar></app-button-limpar>
+            </div>
         </div>
-    </div>
-
-    <div>
-        <app-empresa-table></app-empresa-table>
+        <div>
+            <app-empresa-table></app-empresa-table>
+        </div>
     </div>
 </div>
