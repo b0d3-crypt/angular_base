@@ -26,8 +26,8 @@ body {
 }
 
 @layer components {
-  .btn-search {
-    @apply font-semibold px-4 py-2 rounded-md shadow-md mb-8;
+  .btn {
+    @apply w-[140px] h-[40px] text-center font-semibold rounded-md shadow-md;
   }
 
   .view-container {
@@ -43,14 +43,24 @@ body {
   }
 
   .tittle-container {
-    @apply flex justify-between items-center pb-4 border-gray-300;
+    @apply flex justify-between items-center pb-4 border-b border-gray-300;
+  }
+
+  .form-container {
+    @apply flex justify-between items-start gap-4 mb-6;
   }
 
   .input-container {
-    @apply flex flex-wrap gap-4 items-end;
+    @apply grid grid-cols-6 gap-2 w-full;
+    /* Define 3 colunas fixas */
+  }
+
+  .input-container>* {
+    @apply min-w-[200px] w-full;
+    /* Mantém o tamanho flexível */
   }
 
   .button-container {
-    @apply flex justify-end gap-4 ml-auto;
+    @apply flex flex-col gap-4 ml-4 self-start w-[140px];
   }
 }
